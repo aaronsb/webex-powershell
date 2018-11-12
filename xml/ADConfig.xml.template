@@ -1,0 +1,31 @@
+<Config>
+    <searchBase>DC=contoso,DC=com</searchBase>
+    <!-- Make sure you've properly coded nonvalid characters in your XML. For example, ampersand is &#038; -->
+    <searchQuery>(&#038;
+        (objectCategory=Person)
+        (sAMAccountName=*)
+        (ipPhone=*)
+        (!(sn=Template))
+        (!
+            (userAccountControl:1.2.840.113556.1.4.803:=2)
+        )
+        (|
+            (memberOf:1.2.840.113556.1.4.1941:=CN=Role.Employee.Contractor,OU=User,OU=.Role.,DC=contoso,DC=com)
+            (memberOf:1.2.840.113556.1.4.1941:=CN=Role.Employee.FullTime,OU=User,OU=.Role.,DC=contoso,DC=com)
+            (memberOf:1.2.840.113556.1.4.1941:=CN=Role.Employee.Intern,OU=User,OU=.Role.,DC=contoso,DC=com)
+        )
+    )</searchQuery>
+    <user>
+        <property>GivenName</property>
+        <property>Surname</property>
+        <property>Title</property>
+        <property>Description</property>
+        <property>Company</property>
+        <property>SAMAccountName</property>
+        <property>StreetAddress</property>
+        <property>City</property>
+        <property>State</property>
+        <property>PostalCode</property>
+        <property>EmailAddress</property>   
+    </user>
+</Config>

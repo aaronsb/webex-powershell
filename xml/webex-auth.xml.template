@@ -1,0 +1,7 @@
+<SecurityContext>
+    <SiteName>mywebexsitename</SiteName>
+    <ServiceAccountName>webexaccountwithadminrights</ServiceAccountName>
+    <ServiceAccountPassword>mysupersecretpassword</ServiceAccountPassword>
+    <SiteID>siteidasshowninwebexcontrolpanel</SiteID>
+    <PartnerID>partneridshowininwebexcontrolpanelifyoudontseeitaskyourwebexsalesrep</PartnerID>
+</SecurityContext>
